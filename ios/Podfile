@@ -8,6 +8,10 @@ target 'FoodDelivery' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+
   target 'FoodDeliveryTests' do
     inherit! :complete
     # Pods for testing
