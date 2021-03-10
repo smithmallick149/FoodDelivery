@@ -9,7 +9,7 @@ import {isIphoneX} from 'react-native-iphone-x-helper';
 import DeviceInfo from 'react-native-device-info';
 import {Home} from '../screen_container';
 
-import {COLORS, icons} from '../constants';
+import {COLORS, icons} from '../theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -65,7 +65,7 @@ const TabBarCustomButton = ({accessibilityState, children, onPress}) => {
 };
 
 const CustomTabBar = (props) => {
-  if (isIphoneX()) {
+  if (isIphoneX() || hasNotch) {
     return (
       <View>
         <View
