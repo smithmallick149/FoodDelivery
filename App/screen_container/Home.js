@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -324,10 +324,10 @@ const Home = ({navigation}) => {
     },
   ];
 
-  const [categories, setCategories] = React.useState(categoryData);
-  const [selectedCategory, setSelectedCategory] = React.useState(null);
-  const [restaurants, setRestaurants] = React.useState(restaurantData);
-  const [currentLocation, setCurrentLocation] = React.useState(
+  const [categories, setCategories] = useState(categoryData);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [restaurants, setRestaurants] = useState(restaurantData);
+  const [currentLocation, setCurrentLocation] = useState(
     initialCurrentLocation,
   );
 
